@@ -1,33 +1,29 @@
 import java.util.*
 
-public class BinTree
+public class BinTree<T>
 {
 
-	public void addLeftChild(BinTreeNode leftChildNode);
+	private BinTreeNode<T> root;
 
-	public void addRightChild(BinTreeNode rightChildNode);
-
-	public void setParent(BinTreeNode parentNode);
-
-	public BinTreeNode<T> getParent();
-
-	public BinTreeNode<T> getLeftChild();
-
-	public BinTreeNode<T> getRightChild();
-
-	public class BinTree<T>
+	public BinTreeNode<T> getRoot()
 	{
 
+		return null;
+	}
 
-		private BinTreeNode<T> root;
+	public void setRoot(BinTreeNode<T> root)
+	{
+
 
 
 	}
 
-	public BinTreeNode<T> getRoot();
+	public boolean isBalanced()
+	{
 
-	public void setRoot(BinTreeNode<T>);
+ 
 
-	public boolean isBalanced();
+	}
 
+	
 }

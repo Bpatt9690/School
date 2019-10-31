@@ -1,7 +1,7 @@
 import java.util.*
 
 
-public class binaryTree<T>
+public class BinTreeNode<T>
 {
 
 	private <T> key;
