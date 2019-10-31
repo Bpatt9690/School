@@ -17,55 +17,52 @@ public class BinTreeNode<T>
 	public BinTreeNode(T key, Object satelliteData)
 	{
 
+
 		this.key = key;
+
 		this.satelliteData = satelliteData;
 
-		parent = null;
-		leftChild = null;
-		rightChild = null;
+		this.parent = null;
 
+		this.leftChild = null;
+
+		this.rightChild = null;
 
 	}
 
-
-	public void addLeftChild(BinTreeNode leftChildNode)
+	public void addLeftChild(BinTreeNode<T> leftChildNode)
 	{
 
-
+		this.leftChild = leftChildNode;
 	}
 
-	public void addRightChild(BinTreeNode rightChildNode)
+	public void addRightChild(BinTreeNode<T> rightChildNode)
 	{
 		this.rightChild = rightChildNode;
 
 	}
 
-	public void setParent(BinTreeNode parentNode)
+	public void setParent(BinTreeNode<T> parentNode)
 	{
+		this.parent = parentNode;
 
 	}
 
 	public BinTreeNode<T> getParent()
 	{
-
-
-
-
-
-		return null;
-
+		return  parent;
 	}
 
 	public BinTreeNode<T> getLeftChild()
 	{
-		return null;
+
+		return leftChild;
 
 	}
 
 	public BinTreeNode<T> getRightChild()
 	{
-		return rightChildNode;
-
+		return rightChild;
 	}
 
 	@Override
@@ -73,6 +70,7 @@ public class BinTreeNode<T>
 	{
 
 		String keyString;
+
 		String dataString;
 
 		if(this.key == null)
