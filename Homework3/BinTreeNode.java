@@ -36,7 +36,7 @@ public class BinTreeNode<T>
 
 	public void addRightChild(BinTreeNode rightChildNode)
 	{
-
+		this.rightChild = rightChildNode;
 
 	}
 
@@ -64,7 +64,7 @@ public class BinTreeNode<T>
 
 	public BinTreeNode<T> getRightChild()
 	{
-		return null;
+		return rightChildNode;
 
 	}
 
