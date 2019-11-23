@@ -1,16 +1,25 @@
+/*
+
+Blake Patterson
+Homework 3
+
+*/
+
 import java.util.*;
 
 public class BinTree<T> 
 {
 	private BinTreeNode<T> root;
 
+	public int leftTreeHeight;
+
+	public int rightTreeHeight;
 
 	public BinTreeNode<T> getRoot()
 	{
 
 		return this.root;
 	}
-
 
 	public void setRoot(BinTreeNode<T> root)
 	{
@@ -22,29 +31,18 @@ public class BinTree<T>
 	public boolean isBalanced()
 	{
 
-		int leftHeight, rightHeight, diff;
+		int leftHeight, rightHeight, balance;
 
 		if(this.root == null)
-			return false;
+			return true;
 
 		else if(this.root != null)
 		{
 
-
-			leftHeight = leftTree();
-
-			rightHeight = rightTree();
-
-			balance = leftHeight - rightHeight;
-
-			Math.abs(balance);
-
-			System.out.println(balance);
-
-			if(balance <= 1)
+			if(treeHeight(root) <= 1)
 				return true;
 
-			else if(diff > 1)
+			else
 				return false;
 
 		}
@@ -52,21 +50,22 @@ public class BinTree<T>
 		return false;
 	}
 
-	public int leftTree(BinTreeNode<T> node)
+	public static int treeHeight(BinTreeNode node)
 	{
+
 		if(node == null)
-			return 0;
+			return -1;
 
 		
-		return 0;
+		int leftHeight = treeHeight(node.getLeftChild());
+
+		int rightHeight = treeHeight(node.getRightChild());
+
+		int currentHeight = Math.abs(leftHeight-rightHeight)+1;
+
+		return currentHeight;
 
 	}
 
 
-	public int rightTree()
-	{
-
-	return 0;
-
-	}
 }

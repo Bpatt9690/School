@@ -1,3 +1,10 @@
+/*
+
+Blake Patterson
+Homework 3
+
+*/
+
 import java.util.*;
 
 
@@ -16,7 +23,6 @@ public class BinTreeNode<T>
 
 	public BinTreeNode(T key, Object satelliteData)
 	{
-
 
 		this.key = key;
 
@@ -87,6 +93,5 @@ public class BinTreeNode<T>
 
 
 	}
-
 
 }
