@@ -10,7 +10,7 @@ public class Bogus
 		int [] a = StringMatch.CheckStringMatch("".toCharArray(), "".toCharArray());
 		if (a != null) Arrays.sort(a);
 		System.out.println(Arrays.toString(a));
-/*
+
 		// Expected Output: []
 		a = StringMatch.CheckStringMatch("".toCharArray(), "Have a great turkey day.".toCharArray());
 		if (a != null) Arrays.sort(a);
@@ -41,5 +41,4 @@ public class Bogus
 		if (a != null) Arrays.sort(a);
 		System.out.println(Arrays.toString(a));
 	}
-	*/
 }

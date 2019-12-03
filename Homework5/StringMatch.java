@@ -11,6 +11,10 @@ public class StringMatch{
 
 	int[] nullArray = new int[1];
 
+	if(text_arr == null || fragment_arr == null){
+		return index;
+	}
+
 	int textArrLength = text_arr.length;
 
 	int fragmentArrLength = fragment_arr.length; 
@@ -19,17 +23,22 @@ public class StringMatch{
 
 	long fragmentHash = convertToHash(fragment_arr,fragmentArrLength);
 
-	if(text_arr == null || fragment_arr == null){
+	if(textArrLength < fragmentArrLength){
 		index = new int[0];
 		return index;
 	}
 
-	else if(textArrLength < fragmentArrLength){
+	else if(fragmentHash == 0 && textHash == 0){
 		index = new int[0];
 		return index;
 	}
 
-	if(textHash == fragmentHash){
+	else if(fragmentHash == 0 || textHash == 0){
+		index = new int[0];
+		return index;
+	}
+
+	else if(textHash == fragmentHash){
 		index = new int[1];
 		index[0] = 0;
 		return index;
@@ -81,14 +90,4 @@ public class StringMatch{
 
 	}
 
-	public static void main(String[] args){
-	
-		char[] text_arr = {'H','a','l','i','m',' ','g','e','t','s',' ','a','l','i','g','n','m','e','n','t'};
-
-		char[] fragment_arr = {'a','l','i'};
-
-		CheckStringMatch(text_arr,fragment_arr);
-
-	}
-	
 }
