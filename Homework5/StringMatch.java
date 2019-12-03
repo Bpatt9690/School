@@ -19,13 +19,6 @@ public class StringMatch{
 
 	long fragmentHash = convertToHash(fragment_arr,fragmentArrLength);
 
-
-
-	//System.out.println("The text length is "+textArrLength);
-
-	//System.out.println("The fragment Arr is "+fragmentArrLength);
-
-
 	if(text_arr == null || fragment_arr == null){
 		index = new int[0];
 		return index;
